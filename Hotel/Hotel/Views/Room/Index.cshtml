@@ -5,28 +5,54 @@
 @{
 }
 
+<link rel="stylesheet" href="StyleSheet.css" />
+
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Our Rooms</h1>
+        <h2 class="jumbotron-heading">Quality in every detail</h2>
+    </div>
+</section>
+
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
-            @foreach(var item in Model)
-            {
-            <div class="col-md-6">
-                <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="@item.Image" width="100%" height="225" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">@item.Title</p>
-                            <p class="card-text">@item.Description</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <main>
+                <div class="container py-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-5 mb-4 bg-light rounded-3 text-center">
+                                <div class="container-fluid py-5">
+                                    <h1 class="display-5 fw-bold">Junior Suite</h1>
+                                    <p class="fs-4">Junior Suite, a sanctuary of elegance and comfort. This exquisite space seamlessly blends modern luxury with timeless charm. Adorned with tasteful furnishings and bathed in soft, natural light, the suite invites you to unwind in style. The spacious living area provides a perfect setting for relaxation, while the plush bedroom promises a restful night's sleep.</p>
+                                    <button class="btn btn-outline-secondary btn-lg" type="button">Book</button> <!-- Додано btn-lg для збільшення кнопки -->
+                                </div>
                             </div>
-                            <small class="text-muted">@item.RoomCategory</small>
                         </div>
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-md-6">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top" src="@item.Image" width="100%" height="225" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">@item.Title</p>
+                                        <p class="card-text">@item.Description</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <a type="btn btn-success" asp-controller="room" asp-action="Detail" asp-route-id="@item.Id"
+                                                   class="btn btn-sm btn-outline-secondary">View</a>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
+                                            </div>
+                                            <small class="text-muted">@item.RoomCategory</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
-            </div>
-            }
+            </main>
         </div>
     </div>
 </div>

@@ -26,7 +26,7 @@ namespace RunGroopWebApp.Data
                         new Room()
                         {
                             Title = "Junior Suite",
-                            Image = "blob:https://web.telegram.org/2d68ce0c-9b43-4eed-a14f-2dde0c3e1cdc",
+                            Image = "https://i.imgur.com/RZiPATw.jpg",
                             Description = "A spacious bedroom and living room will give you a feeling of lightness and home comfort. ",
                             RoomCategory = RoomCategory.JuniorSuite,
                             InfoUser = new InfoDescription()
@@ -39,7 +39,7 @@ namespace RunGroopWebApp.Data
                         new Room()
                         {
                             Title = "Deluxe room",
-                            Image = "blob:https://web.telegram.org/cb88a7ee-57fe-403c-be4e-6f66b97c362c",
+                            Image = "https://i.imgur.com/biXoxqT.jpg",
                             Description = "A deluxe room is best suited for families with children,because everyone will have their own space",
                             RoomCategory = RoomCategory.DeluxeRoom,
                             InfoUser = new InfoDescription()
@@ -51,7 +51,7 @@ namespace RunGroopWebApp.Data
                         new Room()
                         {
                             Title = "Presidental Apartaments",
-                            Image = "blob:https://web.telegram.org/1528a30d-a049-41ba-9c23-c023d7f45a55",
+                            Image = "https://i.imgur.com/6cBbE90.jpg",
                             Description = "Presidential apartments - the best and the most spacious room Egoista Hotel.",
                             RoomCategory = RoomCategory.PresidentalApartaments,
                             InfoUser = new InfoDescription()
@@ -63,7 +63,7 @@ namespace RunGroopWebApp.Data
                         new Room()
                         {
                             Title = "Standard with a large bed",
-                            Image = "blob:https://web.telegram.org/7f66f6b3-4fea-4b1a-a1fa-bfeb2b895e21",
+                            Image = "https://i.imgur.com/gyo9GSf.jpg",
                             Description = "Rest and continue conquering the world. The standard room ideal for business trips and short trips.",
                             RoomCategory = RoomCategory.StandardLargeBed,
                             InfoUser = new InfoDescription()
@@ -75,7 +75,7 @@ namespace RunGroopWebApp.Data
                          new Room()
                         {
                             Title = "Standard with two beds",
-                            Image = "blob:https://web.telegram.org/e7182ab8-16a6-47a5-8e69-62149aef4892",
+                            Image = "https://i.imgur.com/oNe4gZt.jpg",
                             Description = "Traveling with a friend or colleague?Standard room with two beds definitely for you",
                             RoomCategory = RoomCategory.StandardLargeDouble,
                             InfoUser = new InfoDescription()
@@ -87,7 +87,7 @@ namespace RunGroopWebApp.Data
                          new Room()
                          {
                              Title = "Superior room",
-                            Image = "blob:https://web.telegram.org/e0990930-f1a0-424e-b451-94817e920791",
+                            Image = "https://i.imgur.com/i4lfomJ.jpg",
                             Description = "Superior room is ideal for both leisure and business trips.",
                             RoomCategory = RoomCategory.SuperiorRoom,
                             InfoUser = new InfoDescription()
@@ -108,7 +108,7 @@ namespace RunGroopWebApp.Data
                         new Restaurant()
                         {
                             Title = "Pizzas",
-                            Image = "https://www.engelvoelkers.com/wp-content/uploads/2014/07/pizza-stock.jpg",
+                            Image = "https://i.imgur.com/TQVS9yG.jpg",
                             Description = "Classic Italian pizza is a sunny symphony of flavor. ",
                             RestaurantCategory = RestaurantCategory.Pizzas,
                             InfoUser = new InfoDescription()
@@ -120,7 +120,7 @@ namespace RunGroopWebApp.Data
                         new Restaurant()
                         {
                             Title = "Salads",
-                            Image = "https://th.bing.com/th/id/OIP.sbPJgFxdcqvukdivbeNLQgHaHa?pid=ImgDet&rs=1",
+                            Image = "https://i.imgur.com/aFBDPvl.jpg",
                             Description = "The salad is a colorful symphony of fresh flavors. Green leafy bases, a selection of tender vegetables, and aromatic seasonings.",
                             RestaurantCategory = RestaurantCategory.Salads,
                             
@@ -133,7 +133,7 @@ namespace RunGroopWebApp.Data
                          new Restaurant()
                         {
                             Title = "Meat",
-                            Image = "https://th.bing.com/th/id/OIP.Z1VBWETVHTV_Zl88104fsQHaHa?pid=ImgDet&rs=1",
+                            Image = "https://i.imgur.com/B2mya7W.jpg",
                             Description = "Delicious and tender meat with a perfect flavor. ",
                             RestaurantCategory = RestaurantCategory.Meat,
                             InfoUser = new InfoDescription()
@@ -145,7 +145,7 @@ namespace RunGroopWebApp.Data
                          new Restaurant()
                         {
                             Title = "Desserts",
-                            Image = "https://th.bing.com/th/id/OIP.tW8ue6EZnpsH783xktdxXQHaHa?pid=ImgDet&rs=1",
+                            Image = "https://i.imgur.com/qWs4aoC.jpg",
                             Description = "Desserts are a sweet treat for the taste buds. They offer the most delicate and delicious combinations of flavors and textures.",
                             RestaurantCategory = RestaurantCategory.Desserts,
 
@@ -158,7 +158,7 @@ namespace RunGroopWebApp.Data
                           new Restaurant()
                         {
                             Title = "Drinks",
-                            Image = "https://th.bing.com/th/id/R.954a636ed39f0a66375f402a62993fd5?rik=QgkKI1kewv%2bV9A&riu=http%3a%2f%2fwww.todayifoundout.com%2fwp-content%2fuploads%2f2014%2f06%2fcocktail.jpg&ehk=MkrJ2MJzFvqqV%2fhachVdMWXXQzscTF1j5RIZ%2bF0e7ts%3d&risl=&pid=ImgRaw&r=0",
+                            Image = "https://i.imgur.com/bT54zg4.jpg",
                             Description = "We have everything,from refreshing citrus cocktails to traditional, aromatic coffees, the drinks cater to a variety of taste preferences. ",
                             RestaurantCategory = RestaurantCategory.Drinks,
 

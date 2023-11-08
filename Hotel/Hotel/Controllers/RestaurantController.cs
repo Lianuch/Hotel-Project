@@ -1,20 +1,27 @@
 ﻿using Hotel.Data;
+using Hotel.Interfaces;
 using Hotel.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel.Controllers
 {
     public class RestaurantController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public RestaurantController(ApplicationDbContext context)
+        private readonly IRestaurantRepository _restaurantRepository;
+        public RestaurantController(IRestaurantRepository restaurantRepository)
         {
-            _context = context;
+            _restaurantRepository = restaurantRepository;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Restaurant> restaurants = _context.Restaurants.ToList();
+            IEnumerable<Restaurant> restaurants = await _restaurantRepository.GetAll();
             return View(restaurants);
+        }
+        public async Task<IActionResult> Detail(int id) 
+        {
+        Restaurant restaurant = await _restaurantRepository.GetByIdAsync(id);
+            return View(restaurant);
         }
     }
 }

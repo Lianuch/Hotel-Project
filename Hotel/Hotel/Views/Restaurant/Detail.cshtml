@@ -1,0 +1,70 @@
+﻿@model  Restaurant
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <h1 class="my-4 text-center">
+        Pizzas
+        <small>Menu</small>
+    </h1>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
+            <img class="img-fluid" src="https://i.imgur.com/8bBe7VC.jpg" alt="">
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="my-3">Description</h3>
+            <p>@Model.Description</p>
+            <h3 class="my-3">Information</h3>
+            <ul>
+                <li><h5>Prises</h5> @Model.InfoUser.Price</li>
+                <li><h5>Sizes</h5> Classic(30x40)/Double(50x70)</li>
+            </ul>
+            <a href="#" class="btn btn-secondary mt-3 align-items-center">Buy</a>
+        </div>
+
+    </div>
+    <!-- /.row -->
+    <!-- Related Projects Row -->
+    <h3 class="my-4 text-center">Other pizzas</h3>
+
+    <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://i.imgur.com/UtpOWgo.jpeg" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://i.imgur.com/eev0tMH.jpeg" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://i.imgur.com/VGtqZ8n.jpeg" alt="">
+            </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+                <img class="img-fluid" src="https://i.imgur.com/H3OXmpa.jpeg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
