@@ -1,58 +1,88 @@
 ﻿@model IEnumerable<Room>
+
 @*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 *@
 @{
 }
 
-<link rel="stylesheet" href="StyleSheet.css" />
+<link rel="stylesheet" href="../Views/Room/StyleSheet.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+<style>
+  
+    body {
+        background-image: url('https://i.imgur.com/WBJINoA.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        font-family: cursive;
+    }
 
-<section class="jumbotron text-center">
-    <div class="container">
+    .text-with-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+</style>
+<section class="jumbotron text-center p-5 p-lg-0 m-0">
+    <div class="container-fluid">
         <h1>Our Rooms</h1>
         <h2 class="jumbotron-heading">Quality in every detail</h2>
     </div>
 </section>
 
-<div class="album py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <main>
-                <div class="container py-4">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="p-5 mb-4 bg-light rounded-3 text-center">
-                                <div class="container-fluid py-5">
-                                    <h1 class="display-5 fw-bold">Junior Suite</h1>
-                                    <p class="fs-4">Junior Suite, a sanctuary of elegance and comfort. This exquisite space seamlessly blends modern luxury with timeless charm. Adorned with tasteful furnishings and bathed in soft, natural light, the suite invites you to unwind in style. The spacious living area provides a perfect setting for relaxation, while the plush bedroom promises a restful night's sleep.</p>
-                                    <button class="btn btn-outline-secondary btn-lg" type="button">Book</button> <!-- Додано btn-lg для збільшення кнопки -->
-                                </div>
-                            </div>
-                        </div>
-                        @foreach (var item in Model)
-                        {
-                            <div class="col-md-6">
-                                <div class="card mb-4 box-shadow">
-                                    <img class="card-img-top" src="@item.Image" width="100%" height="225" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">@item.Title</p>
-                                        <p class="card-text">@item.Description</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group">
-                                                <a type="btn btn-success" asp-controller="room" asp-action="Detail" asp-route-id="@item.Id"
-                                                   class="btn btn-sm btn-outline-secondary">View</a>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Book</button>
-                                            </div>
-                                            <small class="text-muted">@item.RoomCategory</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        }
+
+<section class="container-fluid">
+    <hr class="featurette-divider">
+
+    @foreach (var item in Model)
+    {
+        <div class="row featurette">
+            @if (item.Id % 2 == 0)
+            {
+                <div class="col-md-5 ps-4 order-md-1 order-2">
+                    <img style="width: 500px; height: 500px;" class="img-fluid rounded" src="@item.Image" alt="">
+                    <div class="d-flex justify-content-center mt-3">
+                        <a asp-controller="room" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary w-50" style="color: black;">
+                            View
+                        </a>
+                        <button class="btn btn-sm btn-outline-secondary w-50" style="color: black;">BOOK</button>
                     </div>
                 </div>
-            </main>
+                <div class="col-md-2 order-md-2 order-1"></div>
+                <div class="col-md-5 pe-4 order-md-3 order-3">
+                    <h1>@item.Title</h1>
+                    <p class="fs-4">@item.Description</p>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-5 ps-4 order-md-1 order-2">
+                    <h1>@item.Title</h1>
+                    <p class="fs-4">@item.Description</p>
+                </div>
+                <div class="col-md-2 order-md-2 order-1"></div>
+                <div class="col-md-5 pe-4 order-md-3 order-3">
+                    <img style="width: 500px; height: 500px;" class="img-fluid rounded" src="@item.Image" alt="">
+                    <div class="d-flex justify-content-center mt-3">
+                        <a asp-controller="room" asp-action="Detail" asp-route-id="@item.Id" class="btn btn-sm btn-outline-secondary w-50" style="color: black;">
+                            View
+                        </a>
+                        <button type="button" class="btn btn-sm btn-outline-secondary w-50" style="color: black;">Book</button>
+                    </div>
+                </div>
+            }
         </div>
-    </div>
-</div>
+
+        <hr class="featurette-divider">
+    }
+</section>
+<br />
+
+
+
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyJqFOtkArizmamo2+xskgy9eEkdI4HqD5" crossorigin="anonymous"></script>
+
