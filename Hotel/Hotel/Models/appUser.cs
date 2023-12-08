@@ -13,6 +13,7 @@ namespace Hotel.Models
         [ForeignKey("Address")]
         public int AddressId { get; set; }
         public InfoDescription? InfoUser { get; set; }
+        public Address? Address { get; set; }
 
         public ICollection<Room> Rooms { get; set; }
         public ICollection<Restaurant> Restaurants { get; set; }
