@@ -12,7 +12,7 @@ namespace Hotel.Models
         public string Description { get; set; }
         public string Image { get; set; }
         [ForeignKey("InfoUser")]
-        public int RoomId { get; set; }
+        public int InfoUserId { get; set; }
         public InfoDescription InfoUser { get; set; }
         public RestaurantCategory RestaurantCategory { get; set; }
         [ForeignKey("appUser")]

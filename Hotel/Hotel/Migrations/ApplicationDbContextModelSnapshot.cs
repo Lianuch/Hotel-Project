@@ -80,10 +80,10 @@ namespace Hotel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RestaurantCategory")
+                    b.Property<int>("InfoUserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int>("RestaurantCategory")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -95,7 +95,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoomId");
+                    b.HasIndex("InfoUserId");
 
                     b.HasIndex("appUserId");
 
@@ -118,10 +118,10 @@ namespace Hotel.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RoomCategory")
+                    b.Property<int>("InfoUserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomId")
+                    b.Property<int>("RoomCategory")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -133,7 +133,7 @@ namespace Hotel.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoomId");
+                    b.HasIndex("InfoUserId");
 
                     b.HasIndex("appUserId");
 
@@ -205,6 +205,8 @@ namespace Hotel.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AddressId");
 
                     b.HasIndex("InfoUserId");
 
@@ -356,7 +358,7 @@ namespace Hotel.Migrations
                 {
                     b.HasOne("Hotel.Models.InfoDescription", "InfoUser")
                         .WithMany()
-                        .HasForeignKey("RoomId")
+                        .HasForeignKey("InfoUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -373,7 +375,7 @@ namespace Hotel.Migrations
                 {
                     b.HasOne("Hotel.Models.InfoDescription", "InfoUser")
                         .WithMany()
-                        .HasForeignKey("RoomId")
+                        .HasForeignKey("InfoUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -388,9 +390,17 @@ namespace Hotel.Migrations
 
             modelBuilder.Entity("Hotel.Models.appUser", b =>
                 {
+                    b.HasOne("Hotel.Models.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Hotel.Models.InfoDescription", "InfoUser")
                         .WithMany()
                         .HasForeignKey("InfoUserId");
+
+                    b.Navigation("Address");
 
                     b.Navigation("InfoUser");
                 });
