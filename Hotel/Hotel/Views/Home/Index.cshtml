@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Room>
+﻿@using Hotel.Models
 
 
 @{
@@ -96,24 +96,24 @@
   <div class="container marketing">
     <div class="row align-content-center">
        <div class="col-lg-4">
-                    <img src="https://i.imgur.com/v9MDKMT.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Image" role="img" aria-label="Placeholder">
+            <img src="https://i.imgur.com/v9MDKMT.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Image" role="img" aria-label="Placeholder">
              <h2 class="fw-normal">Junior Suite</h2>
-            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+                <p>Feeling of Effortless Comfort </p>
+                <a asp-controller="room" asp-action="Index" class="btn btn-secondary">View details &raquo;</a>
+        </div>
          <div class="col-lg-4">
          <img src="https://i.imgur.com/biXoxqT.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Image" role="img" aria-label="Placeholder">
          <h2 class="fw-normal">Deluxe Room</h2>
-         <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
+                <p>Best suited for families with children</p>
+                <a asp-controller="room" asp-action="Index" class="btn btn-secondary">View details &raquo;</a>
+            </div>
         <div class="col-lg-4">
                     <img src="https://i.imgur.com/i4lfomJ.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Image" role="img" aria-label="Placeholder">
          <h2 class="fw-normal">Superior Room</h2>
-          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-           <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
+                <p>Ideal for both leisure and business trips</p>
+                <a asp-controller="room" asp-action="Index" class="btn btn-secondary">View details &raquo;</a>
+            </div>
+    </div>
             <hr class="featurette-divider">
 
             <div class="row featurette">

@@ -11,7 +11,7 @@ namespace Hotel.Models
         public int? Pace { get; set; }
         public int? Mileage { get; set; }
         [ForeignKey("Address")]
-        public int AddressId { get; set; }
+        public int? AddressId { get; set; }
         public InfoDescription? InfoUser { get; set; }
         public Address? Address { get; set; }
 

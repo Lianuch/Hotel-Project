@@ -148,7 +148,7 @@ namespace Hotel.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<int>("AddressId")
+                    b.Property<int?>("AddressId")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -392,9 +392,7 @@ namespace Hotel.Migrations
                 {
                     b.HasOne("Hotel.Models.Address", "Address")
                         .WithMany()
-                        .HasForeignKey("AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("AddressId");
 
                     b.HasOne("Hotel.Models.InfoDescription", "InfoUser")
                         .WithMany()
